@@ -3,6 +3,7 @@
 #include "main.h"
 #include "readWrite.h"
 #include "boxFlatten.h"
+#include "solution.h"
 
 bool isInRow (
     grid *board,

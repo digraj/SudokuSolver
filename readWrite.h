@@ -3,6 +3,7 @@
 #include "main.h"
 #include "possibilities.h"
 #include "boxFlatten.h"
+#include "solution.h"
 
 void printNewLine (
 );

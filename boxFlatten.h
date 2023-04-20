@@ -3,6 +3,7 @@
 #include "main.h"
 #include "possibilities.h"
 #include "readWrite.h"
+#include "solution.h"
 
 void getFlattenedRowCol (
     int row,

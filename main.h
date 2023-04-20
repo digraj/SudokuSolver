@@ -1,6 +1,7 @@
 #include "readWrite.h"
 #include "possibilities.h"
 #include "boxFlatten.h"
+#include "solution.h"
 
 #define ROWMAX      9
 #define COLMAX      9
