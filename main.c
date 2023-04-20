@@ -86,15 +86,18 @@ void solution (
     bool *isSolved,
     grid *finalBoard
 ) {
-    int i;
-    int nextRow, nextCol;
+    int flatRow, flatCol, i, nextRow, nextCol;
     nextRow = nextCol = 0;
+    flatRow = flatCol = -1;
 
     while (!(*isSolved) & (col < COLMAX) & (row < ROWMAX)) {
         for (i = 0; i < MAXVAL; i++) {
             if (board.board[row][col].possible[i]) {
+                getFlattenedRowCol(row, col, &flatRow, &flatCol);
                 board.board[row][col].value = i+1;
                 board.board[row][col].isOriginal = true;
+                boxBoard.board[flatRow][flatCol].value = i+1;
+                boxBoard.board[flatRow][flatCol].isOriginal = true;
                 createPossibilitiesArray(&board, &boxBoard);
                 isComplete(&board, isSolved);
                 if (*isSolved) {

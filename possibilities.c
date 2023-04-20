@@ -89,7 +89,6 @@ void createPossibilitiesArray (
     for (row = 0; row < ROWMAX; row++) {
         for (col = 0; col < COLMAX; col++) {
             if (!(board->board[row][col]).isOriginal) {
-                // printf("%d %d\n", row, col);
                 getPossibilities(board, boxBoard, row, col);
             }
         }
