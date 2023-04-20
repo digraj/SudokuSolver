@@ -18,6 +18,7 @@ typedef struct _cell {
 
 typedef struct _grid {
     cell board[ROWMAX][COLMAX];
+    bool solved;
 } grid;
 
 #endif

@@ -136,16 +136,19 @@ int getOnlyValue (
 
 bool fillSinglePossibilities (
     grid *board,
-    grid *boxBoard
+    grid *boxBoard,
+    bool *isSolved
 ) {
     int row, col, psum, flatRow, flatCol, i;
     bool retVal = true;
     flatRow = flatCol = -1;
     row = col = 0;
+    *isSolved = true;
 
     for (row = 0; row < ROWMAX; row++) {
         for (col = 0; col < COLMAX; col++) {
             if (!(board->board[row][col]).isOriginal) {
+                *isSolved = false;
                 psum = possibilityArraySum(board->board[row][col]);
                 // printf("psum: %d row: %d col: %d \n", psum, row, col);
                 if (psum == 1) {

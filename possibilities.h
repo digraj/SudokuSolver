@@ -60,5 +60,6 @@ int getOnlyValue (
 
 bool fillSinglePossibilities (
     grid *board,
-    grid *boxBoard
+    grid *boxBoard,
+    bool *isSolved
 );
